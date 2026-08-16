@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Survival Arena</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div id="game-container">
+
+        <canvas id="game"></canvas>
+
+        <!-- =========================
+             HUD
+        ========================== -->
+
+        <div id="hud">
+
+            <div class="hud-row">
+                ❤️ Health:
+                <span id="health">100</span>
+                /
+                <span id="max-health">100</span>
+            </div>
+
+            <div class="hud-row">
+                ⬆ Level:
+                <span id="level">1</span>
+            </div>
+
+            <div class="hud-row">
+                💀 Kills:
+                <span id="kills">0</span>
+            </div>
+
+            <div class="hud-row">
+                ⭐ Score:
+                <span id="score">0</span>
+            </div>
+
+            <div class="hud-row">
+                ⏱ Time:
+                <span id="time">0</span>s
+            </div>
+
+            <div class="hud-row">
+                🔫 Fire Rate:
+                <span id="fire-rate">5.0</span>/sec
+            </div>
+
+            <div id="xp-label">
+                XP:
+                <span id="xp">0</span>
+                /
+                <span id="xp-needed">50</span>
+            </div>
+
+            <div id="xp-container">
+                <div id="xp-bar"></div>
+            </div>
+
+        </div>
+
+
+        <!-- =========================
+             INSTRUCTIONS
+        ========================== -->
+
+        <div id="instructions">
+            <strong>WASD</strong> to move
+            <br>
+            <strong>Mouse</strong> to aim
+            <br>
+            Shooting is automatic
+        </div>
+
+
+        <!-- =========================
+             LEVEL UP SCREEN
+        ========================== -->
+
+        <div id="upgrade-menu" class="hidden">
+
+            <h1>LEVEL UP!</h1>
+
+            <h2>
+                Level
+                <span id="upgrade-level">2</span>
+            </h2>
+
+            <p>Choose one upgrade:</p>
+
+            <div id="upgrade-buttons"></div>
+
+        </div>
+
+
+        <!-- =========================
+             GAME OVER SCREEN
+        ========================== -->
+
+        <div id="game-over" class="hidden">
+
+            <h1>GAME OVER</h1>
+
+            <p>
+                Level:
+                <span id="final-level">1</span>
+            </p>
+
+            <p>
+                Kills:
+                <span id="final-kills">0</span>
+            </p>
+
+            <p>
+                Score:
+                <span id="final-score">0</span>
+            </p>
+
+            <p>
+                Survival Time:
+                <span id="final-time">0</span>s
+            </p>
+
+            <button id="restart-button">
+                Play Again
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
